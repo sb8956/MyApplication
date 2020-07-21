@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="0.9">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
 
+    >
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
         android:gravity="center"
         android:text="LOGIN"
         android:textColor="@color/colorPrimaryDark"
@@ -22,56 +25,112 @@
         android:src="@mipmap/ic_launcher"
         android:layout_gravity="center"
         />
-    
-    <EditText
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:hint="Email"
-        android:layout_height="50dp"/>
-    <EditText
+        android:layout_height="37dp"
+        android:layout_marginBottom="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/TextInputEditText_email"
+            android:layout_width="matchparent"
+            android:layout_height="50dp"
+            android:hint="email" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:hint="Password"
-        android:layout_height="50dp"/>
-    <Button
+        android:layout_height="36dp"
+        android:layout_marginBottom="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="matchparent"
+            android:layout_height="50dp"
+            android:hint="password"
+            android:id="@+id/TextInputEditText_password"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:orientation="horizontal"
         android:background="@drawable/bin_blue"
-        android:textColor="#ffffff"
-        android:text="Login"/>
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:weightSum="1"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:stateListAnimator="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:text="Login"/>
+
+    </RelativeLayout>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="or"
-        android:textSize="20sp"/>
-    <Button
+        android:layout_marginBottom="16dp"
+        android:text="Or"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         android:background="@drawable/bin_darkblue"
-        android:textColor="#ffffff"
-        android:text="Login with Facebook"/>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_gravity="center"
-    android:weightSum="10">
-    <TextView
-        android:layout_width="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:clickable="true"
+        android:weightSum="1">
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:stateListAnimator="@null"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Login with Facebook"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_weight="5"
-        android:text="Find password"
-        android:textSize="20sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_weight="5"
-        android:text="Sign up"
-        android:textSize="20sp"/>
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:textSize="24sp"
+            android:text="Find Password"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="24sp"
+            android:text="Sign Up"/>
+    </LinearLayout>
+
 </LinearLayout>
 
-
-
-
-</LinearLayout>
